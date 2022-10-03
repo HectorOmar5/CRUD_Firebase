@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "3dadc80c-ce90-442b-91b0-7519f04d4013": {
+      "ProjectGuid": "3dadc80c-ce90-442b-91b0-7519f04d4013",
+      "DisplayName": "Crud_Firebase",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

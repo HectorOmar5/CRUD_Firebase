@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Crud_Firebase.Models.Contacto>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+
+<div class="panel panel-primary">
+    <div class="panel panel-heading">
+        <h4>Lista de Contactos</h4>
+    </div>
+    <div class="panel-body">
+        <a class="btn btn-success" href="@Url.Action("Create", "Mantenedor")">Crear Nuevo</a>
+        <hr />
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Telefono</th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+                 {
+                <tr>
+                    <td>@item.Nombre</td>
+                    <td>@item.Correo</td>
+                    <td>@item.Telefono</td>
+                    <td>
+                        <a class="btn btn-primary btn-sm" href="@Url.Action("Edit", "Mantenedor", new { idContactoo = item.idContacto})">Editar</a>
+                        <a class="btn btn-danger btn-sm" href="@Url.Action("Delete", "Mantenedor", new { idContactoo = item.idContacto})">Eliminar</a>
+                    </td>
+                </tr>
+                 }
+            </tbody>
+        </table>
+    </div>
+
+</div>

@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+
+<div class="panel panel-primary">
+    <div class="panel panel-heading">
+        <h4>Crear Contacto</h4>
+    </div>
+    <div class="panel-body">
+        <form action="@Url.Action("Create", "Mantenedor")" method="post">
+            <div class="form-group">
+                <label>Nombre: </label>
+                <input class="form-control" type="text" name="Nombre" />
+            </div>
+
+            <div class="form-group">
+                <label>Correo: </label>
+                <input class="form-control" type="text" name="Correo" />
+            </div>
+
+            <div class="form-group">
+                <label>Telefono: </label>
+                <input class="form-control" type="text" name="Telefono" />
+            </div>
+
+            <hr />
+            <button type="submit" class="btn btn-primary">Registrar</button>
+            <a class="btn btn-danger" href="@Url.Action("Index", "Mantenedor")">Volver</a>
+        </form>
+
+    </div>
+
+</div>
+
